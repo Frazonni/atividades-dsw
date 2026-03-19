@@ -1,0 +1,45 @@
+<form action="/enviar" method="POST">
+
+<h1>Meu Formulario</h1>
+
+<form action="/cadastro" method="POST">
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome"
+           required minlength="3" maxlength="100">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"
+           required placeholder="seu@email.com">
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone"
+           pattern="\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}"
+           placeholder="(11) 99999-9999">
+
+    <label for="nascimento">Data de Nascimento:</label>
+    <input type="date" id="nascimento" name="nascimento" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Preferências</legend>
+
+    <label>
+      <input type="checkbox" name="newsletter" value="sim">
+      Desejo receber newsletter
+    </label>
+
+    <label for="cidade">Cidade:</label>
+    <select id="cidade" name="cidade" required>
+      <option value="" disabled selected>Selecione...</option>
+      <option value="sp">São Paulo</option>
+      <option value="rj">Rio de Janeiro</option>
+      <option value="bh">Belo Horizonte</option>
+    </select>
+  </fieldset>
+
+  <button type="submit">Cadastrar</button>
+  <button type="reset">Limpar</button>
+</form>
